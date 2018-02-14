@@ -45,5 +45,20 @@ student3.save()
 student4.save()
 student5.save()
 
+gryffindor = House.new({
+  'name' => 'Gryffindor',
+  'url' => 'https://vignette.wikia.nocookie.net/harrypotter/images/9/96/Gryffindor_crest_by_tuliipiie-d491bqc.jpg/revision/latest?cb=20130508231701&format=original'
+})
+
+ravenclaw = House.new({
+  'name' => 'Ravenclaw',
+  'url' => 'https://cdn1.bigcommerce.com/n-ou1isn/ydriczk/products/88363/images/91130/Harry-Potter-Ravenclaw-Crest-Official-wall-mounted-cardboard-cutout-buy-now-at-star__86173.1507640763.450.659.jpg?c=2'
+})
+
+hufflepuff = House.new({
+  'name' => 'Hufflepuff',
+  'url' => ''
+  })
+
 binding.pry
 nil
