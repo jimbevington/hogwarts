@@ -1,7 +1,9 @@
 require('pry')
 
 require_relative('../models/student.rb')
+require_relative('../models/house.rb')
 
+House.delete_all()
 Student.delete_all()
 
 student1 = Student.new({
@@ -47,18 +49,28 @@ student5.save()
 
 gryffindor = House.new({
   'name' => 'Gryffindor',
-  'url' => 'https://vignette.wikia.nocookie.net/harrypotter/images/9/96/Gryffindor_crest_by_tuliipiie-d491bqc.jpg/revision/latest?cb=20130508231701&format=original'
+  'url' => 'https://goo.gl/zM6J72'
 })
 
 ravenclaw = House.new({
   'name' => 'Ravenclaw',
-  'url' => 'https://cdn1.bigcommerce.com/n-ou1isn/ydriczk/products/88363/images/91130/Harry-Potter-Ravenclaw-Crest-Official-wall-mounted-cardboard-cutout-buy-now-at-star__86173.1507640763.450.659.jpg?c=2'
+  'url' => 'https://goo.gl/kDrtv6'
 })
 
 hufflepuff = House.new({
   'name' => 'Hufflepuff',
-  'url' => ''
-  })
+  'url' => 'https://goo.gl/mjKXL1'
+})
+
+slytherin = House.new({
+  'name' => 'Slytherin',
+  'url' => 'https://goo.gl/SC6zjf'
+})
+
+gryffindor.save()
+ravenclaw.save()
+hufflepuff.save()
+slytherin.save()
 
 binding.pry
 nil
