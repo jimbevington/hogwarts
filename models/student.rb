@@ -20,6 +20,13 @@ class Student
     @id = save.first()['id'].to_i
   end
 
+  def find_house()
+    sql = "SELECT * FROM houses WHERE id = $1"
+    values = [@house]
+    house = SqlRunner.run(sql, values)
+    return House.new(house.first)
+  end
+
 
   def self.find_by_id(id)
     sql = "SELECT * FROM students WHERE id = $1"
